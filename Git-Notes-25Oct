@@ -1,0 +1,122 @@
+- SDLC & Waterfall model > Phases of sdlc model
+- Agile Model
+
+2-4 weeks 
+
+> Scrum Framework
+
+
+1. PO - Product Ownner
+
+2. Dev. Team : Responsible for build the stories, Dev/QA/Devops/DBA/Admin
+
+3. Scrum Master : Guide for the team, Technical task / Non-Technical task
+
+4. Scrum Events / Scrum Ceremony :
+
+ > Sprint Planning ( To add tasks, sub-task, give the story point)
+ > Daily Scrum / Daily Standup meeting 
+ > Sprint Review
+ > Sprint Demo
+ > Sprint Retrospective 
+
+
+======================================
+
+To create local repository :
+
+# sudo su -
+# mkdir firstproject
+# cd firstproject
+# touch login.java 
+# ls
+# git init     // To create local repository
+
+===========You have not added your source code or file into Git==============
+
+Staging Area
+
+Stage Area : Actors / Curtains 
+
+# git add .
+# git status
+# git commit -m "My first commit"
+# nano filename.java   // to open file in editor
+# CTRL + X 
+# Y
+# Enter key
+=========================
+# git status
+# git commit -a -m "One more commit after edit file"
+# git status
+# git log      // To check the history of the commits
+# git log --oneline
+
+==============Assignments======================================
+
+1. Open the terminal.
+2. Create one directory.
+3. Create total 5 different files with different name and extensions.
+4. Write some content in all the files.
+5. Create local repository.   
+6. Move all the files in stagina area and you need to commit it.
+7. Again edit any 2 files and commit again.
+8. Provide log history of the files.
+
+===================Revert Command=================================
+
+file1.java
+file2.java   // Deleted file2.java
+login.java
+
+# git rm filename.java
+
+Old State(file2.java) : present in the local repo. and Working Directory (Old state-1)
+
+Deleted file2.java    : deleted the file from local repo. and Working directory (New State)
+
+
+To revert the file..
+
+# git log --oneline
+# copy commit id for deleted file
+# git revert commit id
+# ls   // Now you can see the file
+
+============.gitignore===========================================================
+
+.java  // We need only .java extension files.
+
+.xml, .class, .txt /// I dont want this file to be committed
+
+.gitignore
+
+Step 1 : create some files that we will ignore
+
+# touch file1.txt file2.xml file3.class
+
+Step 2 :
+
+# git status
+
+Step 3 : We dont want to add them or commit them, we want to ignore this files
+
+# nano .gitignore
+
+*.txt
+*.xml
+*.class
+
+========REMOTE REPO===========================GITHUB=================
+
+To connect with github
+
+1. You need to sign up in git hub and open the account
+
+2. Go to terminal > Root folder > #ssh-keygen
+
+3. Enter 3 times and skip other steps on the terminal
+
+4. Use cat command : # cat /root/.ssh/id_rsa.pub
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDhfervxbC6pDzCW+sWvTYEqkLppyCAWvG5VGxmNsP0Xq3OpdFstgelsCdh9ctqt7+TWIDXDwEeUGgquDfRZQhdlZrwgXVe5++rT+730X1MyieiO7CdLoGfm/+A86H4RYgJN5neQhQRhKsH3btftxzzCtqEdThVJMAdHE/xXxYe1JmMqM81sr1/s3Uchwz/BQaBnt7X6VB50ui+0kXUKpcvPqJbsxK3q5nIc1C0KtP0+/7Vt6SmXlqWWcIgxKSDhIc8cmbaKBzP08GtFktX0LmNKjNXZsmYsPdKlJlitzZcVD+qOZ4RwzX53gor7L0EwW5u0Essk6/0SGVyNIpcsP2dU48gDy811PszJ5gFnQ99LNoPjfAhXkXUfy64pipEe10munK3VIuoCFLJ9sp2MBgaJ38wJIV9/tQ+tyweIN5yO8z0IrMVtoeKUkDtOqVoFaeaL84jLlMytkF2Hx0eTISmHGKg+S8qXPDGls25DXKBulV8C766RwnFZ3jEodDo30c= root@ip-172-31-28-188
